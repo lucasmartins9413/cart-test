@@ -21,11 +21,11 @@ export const CartSidebar = () => {
     return(
         <Sheet>
             <SheetTrigger asChild>
-                <Button className="flex items-center gap-2 relative bg-transparent shadow-inherit hover:!bg-transparent hover:!shadow-none">
+                <Button className="flex items-center gap-2 relative bg-transparent shadow-inherit hover:!bg-transparent hover:!shadow-none p-0">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="25"
+                        width="32"
+                        height="33"
                         viewBox="0 0 24 25"
                         fill="none"
                         className="min-w-6"

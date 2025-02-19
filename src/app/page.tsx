@@ -20,8 +20,8 @@ const Page = () => {
             </Suspense>
         </div>
         <PromoBanner/>
-        <Footer/>
     </main>
+    <Footer/>
     </>
   );
 }

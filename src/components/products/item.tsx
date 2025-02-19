@@ -51,7 +51,7 @@ export const ProductItem = ({ item, onAdd }: Props) => {
                 />
             </div>
             <div className="mt-3 flex flex-col gap-2">
-                <h3 className="font-medium text-md line-clamp-2 h-10">{item.name}</h3>
+                <h3 className="font-medium text-md line-clamp-2 h-24">{item.name}</h3>
                 <p className="text-sm text-gray-500">
                     {item.price.toLocaleString('pt-BR', {
                         style: 'currency',

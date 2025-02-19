@@ -11,13 +11,16 @@ export const CartItem = ({item}: Props) => {
             <div className="w-16 overflow-hidden">
                 <img src={item.product.image} alt="" className="w-full h-auto object-cover" />
             </div>
-            <div className="flex-1">
-                <p className="text-sm mb-1">{item.product.name}</p>
-                <p className="text-xs opacity-50">{item.product.price.toFixed(2)}</p>
+            <div className="flex-1 flex flex-col sm:flex-row gap-3 sm:gap-0 sm:items-center justify-between">
+                <div className="flex flex-col">
+                    <p className="text-sm mb-1">{item.product.name}</p>
+                    <p className="text-xs opacity-50">{item.product.price.toFixed(2)}</p>
+                </div>
+                <div>
+                    <CartItemQuantity cartItem={item} />
+                </div>
             </div>
-            <div>
-                <CartItemQuantity cartItem={item} />
-            </div>
+
        </div>
     );
 }
