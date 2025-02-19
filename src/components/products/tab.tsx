@@ -45,12 +45,13 @@ export const ProductsTab = async () => {
 
     return (
         <Tabs defaultValue="men" className="w-full mx-auto mt-10">
-            <TabsList className="flex bg-gray-100 p-1 rounded-lg shadow-md">
+            <TabsList className="flex flex-col sm:flex-row h-auto bg-inherit shadow-inherit sm:bg-gray-100 p-1 rounded-lg shadow-md whitespace-nowrap">
                 {tabs.map(item => (
                     <TabsTrigger
-                        className="flex-1 py-2 text-gray-600 font-semibold transition-all 
-                                 rounded-lg hover:bg-orange-200 hover:text-orange-700 
-                                 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
+                        className="flex-1 min-w-[100px] py-2 text-gray-600 font-semibold transition-all 
+                                rounded-lg hover:bg-orange-200 hover:text-orange-700 
+                                data-[state=active]:bg-orange-500 data-[state=active]:text-white
+                                text-center"
                         key={item.value}
                         value={item.value}
                     >
@@ -60,9 +61,9 @@ export const ProductsTab = async () => {
             </TabsList>
 
             {tabs.map(item => (
-                <TabsContent key={item.value} value={item.value} className="p-4">
+                <TabsContent key={item.value} value={item.value} className="sm:p-4">
                     {item.products.length > 0 ? (
-                        <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+                        <div className="grid gap-5 grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
                             {item.products.map(product => (
                                 <ProductItem 
                                     key={product.id}
